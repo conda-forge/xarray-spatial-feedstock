@@ -22,14 +22,13 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - dask
+    - dask-core
     - datashader
     - numba
     - numpy
     - pandas
     - pillow
     - requests
-    - scikit-learn
     - scipy
     - xarray
 
@@ -45,7 +44,7 @@ about:
   home: https://pypi.org/project/xarray-spatial/
   summary: xarray-based spatial analysis tools
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
