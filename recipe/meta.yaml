@@ -1,5 +1,5 @@
 {% set name = "xarray-spatial" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b1642b3b62efa55c180222381cea25581c65b4e61f4d192f2001729ad3ed833a
+  sha256: 133563b0868d3fc25f410dd7bb5f104a6280a430f715691378c6a579931f13e4
 
 build:
   number: 0
@@ -22,14 +22,13 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - dask
+    - dask-core
     - datashader
     - numba
     - numpy
     - pandas
     - pillow
     - requests
-    - scikit-learn
     - scipy
     - xarray
 
@@ -45,7 +44,7 @@ about:
   home: https://pypi.org/project/xarray-spatial/
   summary: xarray-based spatial analysis tools
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
