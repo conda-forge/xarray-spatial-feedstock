@@ -14,20 +14,24 @@ build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - xrspatial = xrspatial.__main__:main
 
 requirements:
   host:
-    - python
+    - python >=3.6
+    - pyct-core
     - pip
     - setuptools_scm
   run:
-    - python
+    - python >=3.6
     - dask-core
     - datashader
     - numba
     - numpy
     - pandas
     - pillow
+    - pyct-core
     - requests
     - scipy
     - xarray
@@ -37,6 +41,7 @@ test:
     - xrspatial
   commands:
     - pip check
+    - xrspatial --help
   requires:
     - pip
 
