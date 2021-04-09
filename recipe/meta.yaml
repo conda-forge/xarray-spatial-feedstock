@@ -1,5 +1,5 @@
 {% set name = "xarray-spatial" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f51fde07687205e6d2497295e71d65a856f90c3acae93d9bc36363ec82d739ed
+  sha256: c0e193ba352323b4cbcb5adcbf788b029e455ebb0b1fa3bd474520b5ecdee2e7
 
 build:
   number: 0
