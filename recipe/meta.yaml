@@ -31,9 +31,10 @@ requirements:
     - numpy
     - pandas
     - pillow
-    - pyct-core
+    - pyct-core <=0.4.6
     - requests
     - scipy
+    - spatialpandas
     - xarray
 
 test:
