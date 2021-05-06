@@ -22,8 +22,9 @@ requirements:
     - python >=3.6
     - param
     - pip
-    - pyct-core
-    - setuptools_scm
+    - pyct >=0.4.8
+    - setuptools >=54.1.2
+    - wheel >=0.36.2
   run:
     - python >=3.6
     - dask-core
