@@ -1,5 +1,5 @@
 {% set name = "xarray-spatial" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 44465d7e953403afbdb877727c295ce9f566e554781330f5a2065e3b3b6319bf
+  sha256: 930871d5e1842a8d14fca64b1626ccca90e002e6d2ea12956f651026fa9e3424
 
 build:
   number: 0
@@ -20,16 +20,20 @@ build:
 requirements:
   host:
     - python >=3.6
-    - pyct-core
+    - param
     - pip
-    - setuptools_scm
+    - pyct >=0.4.8
+    - setuptools >=54.1.2
+    - wheel >=0.36.2
   run:
     - python >=3.6
     - dask-core
     - datashader
+    - distributed >=2021.03.0
     - numba
     - numpy
     - pandas
+    - param >=1.6.1
     - pillow
     - pyct-core <=0.4.6
     - requests
