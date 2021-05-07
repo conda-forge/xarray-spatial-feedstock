@@ -23,7 +23,7 @@ requirements:
     - param
     - pip
     - pyct >=0.4.8
-    - setuptools >=54.1.2
+    - setuptools >=52.0.0
     - wheel >=0.36.2
   run:
     - python >=3.6
