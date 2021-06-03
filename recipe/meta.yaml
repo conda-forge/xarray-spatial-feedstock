@@ -11,7 +11,7 @@ source:
   sha256: bd6e7d6cd060ccf0ac3eab2ec83ca73487f61b063aedfdd1bb2b55266bf3c605
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -27,9 +27,11 @@ requirements:
     - python >=3.6
     - dask-core
     - datashader
+    - distributed >=2021.03.0
     - numba
     - numpy
     - pandas
+    - param >=1.6.1
     - pillow
     - pyct-core <=0.4.6
     - requests
