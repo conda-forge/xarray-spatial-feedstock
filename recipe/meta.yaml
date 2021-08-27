@@ -28,7 +28,7 @@ requirements:
     - dask-core
     - datashader
     - numba
-    - numpy>=1.7,<=1.20
+    - numpy >=1.7,<=1.20
     - pandas
     - pillow
     - pyct-core <=0.4.6
