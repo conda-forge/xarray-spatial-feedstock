@@ -11,7 +11,7 @@ source:
   sha256: 0ccdf7b20cdbd24eae62e5b88669767acd5194e445b2976bb17f61a795137edf
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -20,21 +20,17 @@ build:
 requirements:
   host:
     - python >=3.6
-    - pyct-core
     - pip
-    - setuptools_scm
+    - pyct-core
   run:
     - python >=3.6
     - dask-core
     - datashader
+    - noise >=1.2.2
     - numba
-    - numpy >=1.7,<=1.20
-    - pandas
-    - pillow
-    - pyct-core <=0.4.6
+    - pyct-core
     - requests
     - scipy
-    - spatialpandas
     - xarray
 
 test:
@@ -56,4 +52,6 @@ extra:
   recipe-maintainers:
     - brendancol
     - giancastro
+    - ianthomas23
     - ocefpaf
+    - thuydotm
