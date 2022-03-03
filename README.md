@@ -118,5 +118,7 @@ Feedstock Maintainers
 
 * [@brendancol](https://github.com/brendancol/)
 * [@giancastro](https://github.com/giancastro/)
+* [@ianthomas23](https://github.com/ianthomas23/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@thuydotm](https://github.com/thuydotm/)
 
