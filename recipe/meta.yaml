@@ -19,11 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - pyct-core
+    - param
   run:
-    - python >=3.6
+    - python >=3.7
     - dask-core
     - datashader
     - noise >=1.2.2
