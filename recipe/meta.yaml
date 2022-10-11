@@ -11,7 +11,7 @@ source:
   sha256: fd7e3b447236f6e8f8c5110684a7ca50f97149c806f56ebf4ed1eeef1dd681ce
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -27,7 +27,6 @@ requirements:
     - python >=3.7
     - dask-core
     - datashader
-    - noise >=1.2.2
     - numba
     - pyct-core
     - requests
@@ -42,6 +41,7 @@ test:
     - xrspatial --help
   requires:
     - pip
+    - noise >=1.2.2
 
 about:
   home: https://pypi.org/project/xarray-spatial/
