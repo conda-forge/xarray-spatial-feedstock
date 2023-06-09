@@ -1,11 +1,11 @@
-About xarray-spatial
-====================
+About xarray-spatial-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xarray-spatial-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/xarray-spatial/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xarray-spatial-feedstock/blob/main/LICENSE.txt)
 
 Summary: xarray-based spatial analysis tools
 
