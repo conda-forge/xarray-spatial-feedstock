@@ -27,6 +27,7 @@ requirements:
     - python >=3.7
     - dask-core
     - datashader
+    - numpy <= 1.23.4
     - noise >=1.2.2
     - numba
     - pyct-core
