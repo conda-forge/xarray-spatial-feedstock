@@ -13,27 +13,25 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - xrspatial = xrspatial.__main__:main
 
 requirements:
   host:
-    - python >=3.7
-    - pip
-    - pyct-core
+    - python >=3.8
+    - python-build
     - param
-  run:
-    - python >=3.7
-    - dask-core
-    - datashader
-    - numpy <=1.23.4
-    - noise >=1.2.2
-    - numba
     - pyct-core
-    - requests
-    - scipy
+    - setuptools >=54.1.2
+    - setuptools-scm
+    - pip
+  run:
+  - python >=3.8
+    - datashader >=0.15.0
+    - numba
     - xarray
+    - numpy
 
 test:
   imports:
