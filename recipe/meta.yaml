@@ -27,7 +27,7 @@ requirements:
     - setuptools-scm
     - pip
   run:
-  - python >=3.8
+    - python >=3.8
     - datashader >=0.15.0
     - numba
     - xarray
