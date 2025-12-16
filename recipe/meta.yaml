@@ -36,6 +36,8 @@ requirements:
 test:
   imports:
     - xrspatial
+    - dask
+    - pyarrow
   commands:
     - pip check
     - xrspatial --help
