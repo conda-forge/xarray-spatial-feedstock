@@ -42,6 +42,8 @@ test:
   requires:
     - pip
     - python {{ python_min }}
+    - dask
+    - pyarrow
 
 about:
   home: https://pypi.org/project/xarray-spatial/
