@@ -1,7 +1,7 @@
 {% set python_min = "3.12" %}
 
 {% set name = "xarray-spatial" %}
-{% set version = "0.6.0" %}
+{% set version = "0.8.0" %}
 
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b8a3f851ae19b270e9ecdca2aa0e2d8fbc7baac02d121a4f78b67e378d2c2783
+  sha256: 43760c9c429afdf68c78d2bf15bf1d97a9dd5109bb7167bbd9a1422827012c7a
 
 build:
   number: 0
@@ -29,6 +29,7 @@ requirements:
     - setuptools-scm
     - pip
   run:
+    - scipy
     - python >={{ python_min }}
     - datashader >=0.15.0
     - numba
