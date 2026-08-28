@@ -1,0 +1,73 @@
+schema_version: 1
+
+context:
+  python_min: "3.12"
+  version: "0.10.18"
+
+package:
+  name: xarray-spatial
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/x/xarray-spatial/xarray_spatial-${{ version }}.tar.gz
+  sha256: a3db9c28b7ab3cc17ab67caeb0facb4cc6a2a5d74990757b1127ee5ab3a55514
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - xrspatial = xrspatial.__main__:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - python-build
+    - param
+    - pyct
+    - setuptools >=54.1.2
+    - setuptools-scm
+    - vcs_versioning
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - numba >=0.59
+    - scipy >=1.11.2
+    - xarray >=2025.11
+    - numpy >=1.26,<2.5
+    - pandas >=2.2
+    - urllib3 >=2.7
+    # Not in the metadata, but necessary to run the entry-point.
+    - pyct
+
+tests:
+  - python:
+      imports:
+        - xrspatial
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - pip
+        - dask
+        - pyarrow
+    script:
+      - xrspatial --help
+
+about:
+  summary: xarray-based spatial analysis tools
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://github.com/xarray-contrib/xarray-spatial
+
+extra:
+  recipe-maintainers:
+    - brendancol
+    - giancastro
+    - ianthomas23
+    - ocefpaf
+    - thuydotm
