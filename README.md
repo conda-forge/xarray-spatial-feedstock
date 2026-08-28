@@ -3,7 +3,7 @@ About xarray-spatial-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xarray-spatial-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pypi.org/project/xarray-spatial/
+Home: https://github.com/xarray-contrib/xarray-spatial
 
 Package license: MIT
 
