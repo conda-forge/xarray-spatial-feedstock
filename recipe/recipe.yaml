@@ -2,20 +2,20 @@ schema_version: 1
 
 context:
   python_min: "3.12"
-  version: "0.10.18"
+  version: "0.10.19"
 
 package:
   name: xarray-spatial
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/x/xarray-spatial/xarray_spatial-${{ version }}.tar.gz
-  sha256: a3db9c28b7ab3cc17ab67caeb0facb4cc6a2a5d74990757b1127ee5ab3a55514
+  url: https://files.pythonhosted.org/packages/source/x/xarray-spatial/xarray_spatial-${{ version }}.tar.gz
+  sha256: 1304955f114fbd9e1224b62d24a89db8524b9f92676f5a99ab63a1b4ace8e5d0
 
 build:
   number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
       - xrspatial = xrspatial.__main__:main
@@ -38,7 +38,6 @@ requirements:
     - numpy >=1.26,<2.5
     - pandas >=2.2
     - urllib3 >=2.7
-    # Not in the metadata, but necessary to run the entry-point.
     - pyct
 
 tests:
@@ -52,7 +51,6 @@ tests:
   - requirements:
       run:
         - python ${{ python_min }}.*
-        - pip
         - dask
         - pyarrow
     script:
