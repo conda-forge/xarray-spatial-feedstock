@@ -38,6 +38,8 @@ requirements:
     - numpy >=2.0,<2.6
     - pandas >=2.2.2
     - urllib3 >=2.7
+    - pyct
+
 tests:
   - python:
       imports:
